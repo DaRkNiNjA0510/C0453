@@ -2,7 +2,7 @@
 | Author | Details |
 | ---- | ---- |
 **Name**: | Jake Dickinson |
-**Student ID**: | 100131286/22200580 |
+**Student ID**: | 22200580 |
 **Course:** | Computing |
 **Module**: | CO453     |
 **Started**: | January 2024 |    
