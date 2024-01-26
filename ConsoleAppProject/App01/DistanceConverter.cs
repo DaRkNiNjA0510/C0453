@@ -23,7 +23,9 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void Run()
         {
-
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
         }
 
         /// <summary>
@@ -32,6 +34,9 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void InputMiles()
         {
+            Console.Write("Please enter the number of Miles >")
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         private void CalculateFeet()
