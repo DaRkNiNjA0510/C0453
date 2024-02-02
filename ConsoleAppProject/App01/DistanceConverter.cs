@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleAppProject;
 using System.Runtime.CompilerServices;
 
 namespace ConsoleAppProject.App01
