@@ -34,7 +34,7 @@ namespace ConsoleAppProject.App01
         private string fromUnit;
         private string toUnit;
 
-    public DistanceConverter()
+        public DistanceConverter()
         {
             fromUnit = MILES;
             toUnit = FEET;
@@ -47,16 +47,18 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void ConvertDistance()
         {
-            fromUnit = SelectUnit("Please select the from distance unit > ");
-            toUnit = SelectUnit("Please select the to distance unit >");
-            OutputHeading($"Converting {fromUnit} to {toUnit}");
+            OutputHeading();
 
+            fromUnit = SelectUnit("select the from distance unit > ");
+            toUnit = SelectUnit("select the to distance unit > ");
 
-            fromDistance = InputDistance($"please enter the number of {fromUnit} >");
+            Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
+
+            fromDistance = InputDistance($" Enter the number of {fromUnit} >");
 
             CalculateDistance();
 
-          OutputDistance();
+            OutputDistance();
         }
 
         private void CalculateDistance()
@@ -75,7 +77,9 @@ namespace ConsoleAppProject.App01
         {
             string choice = DisplayChoices(prompt);
 
-            return ExcuteChoice(choice);
+            string unit = ExcuteChoice(choice);
+            Console.WriteLine($"\n You have chosen {unit}");
+            return unit;
         }
 
         private static string ExcuteChoice(string choice)
@@ -99,9 +103,9 @@ namespace ConsoleAppProject.App01
         private static string DisplayChoices(string prompt)
         {
             Console.WriteLine();
-            Console.WriteLine($"1. {FEET}");
-            Console.WriteLine($"2. {METRES}");
-            Console.WriteLine($"3. {MILES}");
+            Console.WriteLine($" 1. {FEET}");
+            Console.WriteLine($" 2. {METRES}");
+            Console.WriteLine($" 3. {MILES}");
             Console.WriteLine();
 
             Console.Write(prompt);
@@ -121,20 +125,17 @@ namespace ConsoleAppProject.App01
         }
 
         private void OutputDistance()
-        { 
-        Console.WriteLine($"{fromDistance}  {fromUnit} " +
-            $" is {toDistance} {toUnit}!");
+        {
+            Console.WriteLine($"\n {fromDistance}  {fromUnit} " +
+                $" is {toDistance} {toUnit}!\n");
         }
 
-        private void OutputHeading(string prompt)
+        private void OutputHeading()
         {
             Console.WriteLine("\n-------------------------------------");
             Console.WriteLine("            Distance Converter         ");
             Console.WriteLine("            By Jake Dickinson          ");
             Console.WriteLine("--------------------------------------\n");
-
-            Console.WriteLine(prompt);
-            Console.WriteLine();
         }
     }
 }
