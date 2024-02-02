@@ -112,7 +112,7 @@ namespace ConsoleAppProject.App01
         private void OutputHeading()
         {
             Console.WriteLine("\n-------------------------------------");
-            Console.WriteLine("          Convert Miles to Feet        ");
+            Console.WriteLine("            Distance Converter         ");
             Console.WriteLine("            By Jake Dickinson          ");
             Console.WriteLine("--------------------------------------\n");
         }
