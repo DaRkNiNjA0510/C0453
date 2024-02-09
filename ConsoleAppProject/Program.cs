@@ -1,11 +1,12 @@
 ﻿using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
 using System;
 
 namespace ConsoleAppProject
 {
     /// <summary>
     /// The main method in this class is called first
-    /// when the application is started.  It will be used
+    /// when the application is started. It will be used
     /// to start App01 to App05 for CO453 CW1
     /// 
     /// This Project has been modified by:
@@ -23,10 +24,21 @@ namespace ConsoleAppProject
             Console.WriteLine(" =================================================");
             Console.WriteLine();
 
+            // Uncomment the method calls below to run the respective applications
+            //DistanceConverter();
+            BMIApp();
+        }
+
+        private static void DistanceConverter()
+        {
             DistanceConverter converter = new DistanceConverter();
-          
             converter.ConvertDistance();
-            
+        }
+
+        private static void BMIApp()
+        {
+            BMI bmi = new BMI();
+            bmi.CalculateBMI(); 
         }
     }
 }
