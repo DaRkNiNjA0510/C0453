@@ -5,13 +5,12 @@ namespace ConsoleAppProject.App01
     /// <summary>
     /// List of units used to measure distance
     /// </summary>
-    public enum DistanceUnits
+    public enum DistanceUnit
     {
-        [Display(Name = "No Unit")]
         NoUnit,
         Feet,
         Metres,
         Kilometres,
-        Miles
+        Miles,
     }
 }
