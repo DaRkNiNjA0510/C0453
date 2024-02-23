@@ -33,7 +33,7 @@ namespace ConsoleAppProject
             Console.WriteLine();
 
             Console.Write("Please enter your choice of App > ");
-            string choice = Console.ReadLine();
+            string choice = Console.Readline();
 
             if (choice == "1")
             {
@@ -41,9 +41,9 @@ namespace ConsoleAppProject
             }
             else if (choice == "2")
             {
-                calculator.CalculateBMI();
+                calculator.CalculateIndex();
             }
-            else Console.WriteLine("Invalid Choice !");
+            else Concolse.WriteLine("Invalid Choice !")
         }
     }
 }
