@@ -32,16 +32,17 @@ namespace ConsoleAppProject.App01
         public const string METRES = "metres";
         public const string MILES = "Miles";
 
-        private double fromDistance;
-        private double toDistance;
+        public double FromDistance { get; set; }   
 
-        private string fromUnit;
-        private string toUnit;
+        public double ToDistance { get; set; }
+
+        public string FromUnit { get; set; }
+        public  string ToUnit { get; set;  }
 
         public DistanceConverter()
         {
-            fromUnit = MILES;
-            toUnit = FEET;
+            FromUnit = MILES;
+            ToUnit = FEET;
 
         }
         /// <summary>
@@ -53,37 +54,37 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading();
 
-            fromUnit = SelectUnit("select the from distance unit > ");
-            toUnit = SelectUnit("select the to distance unit > ");
+            FromUnit = SelectUnit("select the from distance unit > ");
+            ToUnit = SelectUnit("select the to distance unit > ");
 
-            Console.WriteLine($"\n Converting {fromUnit} to {toUnit}");
+            Console.WriteLine($"\n Converting {FromUnit} to {ToUnit}");
 
-            fromDistance = InputDistance($" Enter the number of {fromUnit} >");
+            FromDistance = InputDistance($" Enter the number of {FromUnit} >");
 
             CalculateDistance();
 
             OutputDistance();
         }
 
-        private void CalculateDistance()
+        public void CalculateDistance()
         {
-            if (fromUnit == MILES && toUnit == FEET)
+            if (FromUnit == MILES && ToUnit == FEET)
             {
-                toDistance = fromDistance * FEET_IN_MILES;
+                ToDistance = FromDistance * FEET_IN_MILES;
             }
-            else if (fromUnit == FEET && toUnit == MILES)
+            else if (FromUnit == FEET && ToUnit == MILES)
             {
-                toDistance = fromDistance / FEET_IN_MILES;
+                ToDistance = FromDistance / FEET_IN_MILES;
             }
-            else if (fromUnit == MILES && toUnit == METRES)
-                toDistance = fromDistance * METERS_IN_MILES;
+            else if (FromUnit == MILES && ToUnit == METRES)
+                ToDistance = FromDistance * METERS_IN_MILES;
 
-            else if (fromUnit == METRES && toUnit == MILES)
+            else if (FromUnit == METRES && ToUnit == MILES)
 
-                toDistance = fromDistance / MILES_IN_METERS;
+                ToDistance = FromDistance / MILES_IN_METERS;
         
-                else if (fromUnit== FEET && toUnit == METRES)
-                toDistance = fromDistance* FEET_IN_METERS;
+                else if (FromUnit== FEET && ToUnit == METRES)
+                ToDistance = FromDistance* FEET_IN_METERS;
     }    
         private string SelectUnit(string prompt)
         {
@@ -138,8 +139,8 @@ namespace ConsoleAppProject.App01
 
         private void OutputDistance()
         {
-            Console.WriteLine($"\n {fromDistance}  {fromUnit} " +
-                $" is {toDistance} {toUnit}!\n");
+            Console.WriteLine($"\n {FromDistance}  {FromUnit} " +
+                $" is {ToDistance} {ToUnit}!\n");
         }
 
         private void OutputHeading()

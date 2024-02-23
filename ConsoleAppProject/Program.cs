@@ -25,8 +25,8 @@ namespace ConsoleAppProject
             Console.WriteLine();
 
             // Uncomment the method calls below to run the respective applications
-            //DistanceConverter();
-            BMIApp();
+            DistanceConverter();
+            //BMIApp();
         }
 
         private static void DistanceConverter()
@@ -35,10 +35,10 @@ namespace ConsoleAppProject
             converter.ConvertDistance();
         }
 
-        private static void BMIApp()
-        {
-            BMI bmi = new BMI();
-            bmi.CalculateBMI(); 
+       // private static void BMIApp()
+        //{
+           // BMI bmi = new BMI();
+           // bmi.CalculateBMI(); 
         }
     }
-}
+//}
