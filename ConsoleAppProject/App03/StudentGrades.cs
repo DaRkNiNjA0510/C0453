@@ -36,8 +36,25 @@ namespace ConsoleAppProject.App03
 
             GradeProfile = new int[(int)Grades.A + 1];
             Marks = new int[Students.Length];
+        }
+        //<summary>
+        // convert a mark into a grade using grade bouundaries
+        //</summary>
+
+        public Grades ConvertToGrade(int mark)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CalculateStats()
+        {
+            throw new NotImplementedException();
 
         }
-    }
 
+        public void CalculateGradeProfile()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
