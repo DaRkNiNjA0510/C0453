@@ -1,5 +1,6 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 using System;
 
 namespace ConsoleAppProject
@@ -17,6 +18,8 @@ namespace ConsoleAppProject
         private static DistanceConverter converter = new DistanceConverter();
 
         private static BMI calculator = new BMI();
+
+        
 
         public static void Main(string[] args)
         {
@@ -42,6 +45,10 @@ namespace ConsoleAppProject
             else if (choice == "2")
             {
                 calculator.CalculateBMI();
+            }
+            else if (choice == "3")
+            {
+                
             }
             else Console.WriteLine("Invalid Choice !");
         }
