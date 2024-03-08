@@ -47,5 +47,14 @@ namespace Testing
             //Assert
             Assert.AreEqual(expectedGrade, actualGrade);
         }
+            [TestMethod]
+            public void TestCalculateMean()
+        {
+            converter.Marks = testmarks;
+            double expectedMean = 55.0;
+            converter.CalculateStats();
+
+            Assert.AreEqual(expectedMean, converter.Mean);
+        }
     }
 }
