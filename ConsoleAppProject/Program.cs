@@ -1,6 +1,7 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using System;
 
 namespace ConsoleAppProject
@@ -19,6 +20,7 @@ namespace ConsoleAppProject
 
         private static BMI calculator = new BMI();
 
+        private static StudentGrades grader = new StudentGrades();
         
 
         public static void Main(string[] args)
@@ -33,6 +35,7 @@ namespace ConsoleAppProject
 
             Console.WriteLine("1. Distance Converter");
             Console.WriteLine("2. BMI Calculator");
+            Console.WriteLine("3. Student Grades Calculator");
             Console.WriteLine();
 
             Console.Write("Please enter your choice of App > ");
@@ -48,8 +51,13 @@ namespace ConsoleAppProject
             }
             else if (choice == "3")
             {
-                
+                grader.OutputMenu();
             }
+            else if (choice == "4")
+            {
+               
+            }
+
             else Console.WriteLine("Invalid Choice !");
         }
     }

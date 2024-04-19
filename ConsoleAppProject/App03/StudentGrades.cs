@@ -26,19 +26,16 @@ namespace ConsoleAppProject.App03
         //Properties
 
         public string[] Students { get; set; }
-
         public int[] Marks { get; set; }
-
         public int[] GradeProfile { get; set; }
-
         public double Mean { get; set; }
-
         public int Minimum { get; set; }
-
         public int Maximum { get; set; }
         public double MinMark { get; set; }
 
         //Attributes
+        public Grades Grades
+        {get => default; set {}}
 
         public StudentGrades()
         {
@@ -87,7 +84,7 @@ namespace ConsoleAppProject.App03
 
         public Grades ConvertToGrade(int mark)
         {
-            if (mark >= 0 && mark < LowestGradeD)
+            if (mark >= Lowestmark && mark < LowestGradeD)
             {
                 return Grades.F;
             }
@@ -115,14 +112,15 @@ namespace ConsoleAppProject.App03
             double total = 0;
 
             Minimum = HighestMark;
-            Maximum = 0;
+            Maximum = Lowestmark;
 
 
             foreach(int mark in Marks)
             {
+                total += mark;
                 if (mark > Maximum) Maximum = mark;
                 if (mark < Maximum) Minimum = mark;
-                total += mark;
+                
             }
             Mean = total / Marks.Length;
         }
@@ -143,5 +141,5 @@ namespace ConsoleAppProject.App03
 
         }
     }
-}
+
 
