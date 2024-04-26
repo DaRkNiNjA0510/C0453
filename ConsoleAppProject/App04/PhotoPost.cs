@@ -15,8 +15,7 @@ namespace ConsoleAppProject.App04
     /// </author>
     public class PhotoPost
     {
-        // username of the post's author
-        public String Username { get; set; }
+  
 
         // the name of the image file
         public String Filename { get; set; }
@@ -24,11 +23,7 @@ namespace ConsoleAppProject.App04
         // a one line image caption
         public String Caption { get; set; }   
         
-        public DateTime Timestamp { get; }
-
-        private int likes;
         
-        private readonly  List<String> comments;
 
         ///<summary>
         /// Constructor for objects of class PhotoPost.
@@ -57,22 +52,7 @@ namespace ConsoleAppProject.App04
         ///<summary>
         /// Record one more 'Like' indication from a user.
         ///</summary>
-        public void Like()
-        {
-            likes++;
-        }
-
-
-        ///<summary>
-        /// Record that a user has withdrawn his/her 'Like' vote.
-        ///</summary>
-        public void Unlike()
-        {
-            if (likes > 0)
-            {
-                likes--;
-            }
-        }
+        
 
 
         ///<summary>

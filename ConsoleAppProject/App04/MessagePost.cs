@@ -12,69 +12,24 @@ namespace ConsoleAppProject.App04
     /// Michael Kölling and David J. Barnes
     /// version 0.1
     /// </author>
-    public class MessagePost
+
+    // an arbitrarily long, multi-line message
+    public String Message { get; }
+
+    /// <summary>
+    /// Constructor for objects of class MessagePost.
+    /// </summary>
+    /// <param name="author">
+    /// The username of the author of this post.
+    /// </param>
+    /// <param name="text">
+    /// The text of this post.
+    /// </param>
+    public MessagePost(String author, String text)
     {
-        private int likes;
+        Message = text;
+    } 
 
-        private readonly List<String> comments;
-
-
-        // username of the post's author
-        public String Username { get; }
-
-        // an arbitrarily long, multi-line message
-        public String Message { get; }
-
-        public DateTime Timestamp { get; }
-
-        /// <summary>
-        /// Constructor for objects of class MessagePost.
-        /// </summary>
-        /// <param name="author">
-        /// The username of the author of this post.
-        /// </param>
-        /// <param name="text">
-        /// The text of this post.
-        /// </param>
-        public MessagePost(String author, String text)
-        {
-            Username = author;
-            Message = text;
-            Timestamp = DateTime.Now;
-
-            likes = 0;
-            comments = new List<String>();
-        }
-
-        /// <summary>
-        /// Record one more 'Like' indication from a user.
-        /// </summary>
-        public void Like()
-        {
-            likes++;
-        }
-
-        ///<summary>
-        /// Record that a user has withdrawn his/her 'Like' vote.
-        ///</summary>
-        public void Unlike()
-        {
-            if (likes > 0)
-            {
-                likes--;
-            }
-        }
-
-        ///<summary>
-        /// Add a comment to this post.
-        /// </summary>
-        /// <param name="text">
-        /// The new comment to add.
-        /// </param>        
-        public void AddComment(String text)
-        {
-            comments.Add(text);
-        }
 
 
         ///<summary>
