@@ -38,6 +38,22 @@ namespace ConsoleAppProject.App04
             AddPhotoPost(photoPost);
         }
 
+        public NetworkApp NetworkApp
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public NetworkApp NetworkApp1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
 
         ///<summary>
         /// Add a text post to the news feed.

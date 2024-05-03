@@ -53,7 +53,7 @@ namespace ConsoleAppProject.App04
         {
             comments.Add(text);
         }
-        public void Display()
+        public virtual void Display()
         {
             Console.WriteLine();
             Console.WriteLine($"    Author: {Username}");
