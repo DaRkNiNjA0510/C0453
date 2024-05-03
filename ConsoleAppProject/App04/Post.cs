@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App04
     {
         private int likes;
 
-        private readonly List<String> comments;
+        private readonly List <String> comments;
 
 
         // username of the post's author
@@ -43,19 +43,57 @@ namespace ConsoleAppProject.App04
                 likes--;
             }
         }
-            ///<summary>
-            /// Add a comment to this post.
-            /// </summary>
-            /// <param name="text">
-            /// The new comment to add.
-            /// </param>        
-            public void AddComment(String text)
-            {
-                comments.Add(text);
-            }
-        //<summary>
-        // Stopped video at 10:32am (C0453-05A Refactoring Using Inheritance)
-        //</Summary>
+        ///<summary>
+        /// Add a comment to this post.
+        /// </summary>
+        /// <param name="text">
+        /// The new comment to add.
+        /// </param>        
+        public void AddComment(String text)
+        {
+            comments.Add(text);
+        }
+        public void Display()
+        {
+            Console.WriteLine();
+            Console.WriteLine($"    Author: {Username}");
+            Console.WriteLine($"    Time Elpased: {FormatElapsedTime(TimeStamp)}");
+            Console.WriteLine();
 
+            if (likes > 0)
+            {
+                Console.WriteLine($"    Likes: -  {likes}  people like this.");
+            }
+            else
+            {
+                Console.WriteLine();
+            }
+
+            if (comments.Count == 0)
+            {
+                Console.WriteLine("    No comments.");
+            }
+            else
+            {
+                Console.WriteLine($"    Comment(s): {comments.Count}  Click here to view.");
+            }
+        }
+
+        private static string FormatElapsedTime(DateTime time)
+        {
+            DateTime current = DateTime.Now;
+            TimeSpan timePast = current - time;
+
+            long seconds = (long)timePast.TotalSeconds;
+            long minutes = seconds / 60;
+
+            if (minutes > 0)
+            {
+                return minutes + " minutes ago";
+            }
+            else
+            {
+                return seconds + " seconds ago";
+            }
+        }
     }
-}
