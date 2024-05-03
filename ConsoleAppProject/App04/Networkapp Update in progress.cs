@@ -8,6 +8,7 @@
     // public class NetworkApp
    // {
         // private NewsFeed news = new NewsFeed();
+
         // public void DisplayMenu()
 
         // {
@@ -28,8 +29,13 @@
               //  {
                //     case 1: PostMessage(); break;
                //     case 2: PostImage(); break;
-               //     case 3: DisplayAll(); break;
-               //     case 4: wantToQuit = true; break;
+               //     case 3: RemovePost(); break;
+               //     case 4: DisplayAll(); break;
+               //     case 5: DisplayByAuthor();break;
+               //     case 6: DisplayByDate(); break;
+               //     case 7: AddComment(); break;
+               //     case 8: LikePosts(); break;
+               //     case 9: wantToQuit = true; break;
               //  }
 
            // } while (!wantToQuit);
@@ -37,17 +43,17 @@
 
         // private void DisplayAll()
         // {
-          //  throw new NotImplementedException();
+        //       throw new NotImplementedException();
        // }
 
        // private void PostImage()
         // {
-          //  throw new NotImplementedException();
+        //      throw new NotImplementedException();
        // }
 
         // private void PostMessage()
         // {
-           // throw new NotImplementedException();
+        //       throw new NotImplementedException();
        // }
     // }
 // }
