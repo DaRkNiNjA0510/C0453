@@ -21,7 +21,7 @@ namespace ConsoleAppProject.App04
     public class NewsFeed
     {
         private readonly List<Post> posts;
-        
+
 
         ///<summary>
         /// Construct an empty news feed.
@@ -29,7 +29,7 @@ namespace ConsoleAppProject.App04
         public NewsFeed()
         {
             posts = new List<Post>();
-   
+
         }
 
 
@@ -65,9 +65,7 @@ namespace ConsoleAppProject.App04
                 post.Display();
                 Console.WriteLine();   // empty line between posts
             }
-
-           
-            }
         }
     }
+}
 

@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App04
     {
         private int likes;
 
-        private readonly List <String> comments;
+        private readonly List<String> comments;
 
 
         // username of the post's author
@@ -97,3 +97,4 @@ namespace ConsoleAppProject.App04
             }
         }
     }
+}
