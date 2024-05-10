@@ -138,7 +138,7 @@ def endScreen():
     pause = 0
     speed = 30
     obstacles = []
-                   
+
     run = True
     while run:
         pygame.time.delay(100)
@@ -151,16 +151,34 @@ def endScreen():
                 runner.falling = False
                 runner.sliding = False
                 runner.jumpin = False
-                
+
         win.blit(bg, (0,0))
         largeFont = pygame.font.SysFont('comicsans', 80)
-        lastScore = largeFont.render('Best Score: ' + str(updateFile()),1,(255,255,255))
+        lastScore = largeFont.render('Best Score: ' + str(updateFile(score)),1,(255,255,255))
         currentScore = largeFont.render('Score: '+ str(score),1,(255,255,255))
         win.blit(lastScore, (W/2 - lastScore.get_width()/2,150))
         win.blit(currentScore, (W/2 - currentScore.get_width()/2, 240))
         pygame.display.update()
     score = 0
 
+def updateFile(score):
+    try:
+        with open('scores.txt', 'r+') as f:
+            file = f.readlines()
+            if file:
+                last = int(file[0])  # Assuming the score is in the first line
+            else:
+                last = 0  # Default value if file is empty
+            if score > last:
+                f.seek(0)
+                f.write(str(score))  # Write the new score to the file
+                return score
+            else:
+                return last
+    except FileNotFoundError:
+        with open('scores.txt', 'w') as file:
+            file.write(str(score))  # Create the file if it doesn't exist
+        return score
         
 
 
